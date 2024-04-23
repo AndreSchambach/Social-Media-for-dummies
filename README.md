@@ -6,4 +6,3 @@
 - Felix Lang
 - Marius Mattes
 - Andre Schambach
-Dies ist ein Test
