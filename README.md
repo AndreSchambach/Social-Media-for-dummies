@@ -8,5 +8,6 @@
 - Andre Schambach
 
 ### Zwischenbericht Andre Schambach
-|Datum | Aufgabe | Aufwand |
+| Datum | Aufgabe | Aufwand |
+| -------- | -------- | -------- |
 | 2024-04-23 | Test | 15 min |
