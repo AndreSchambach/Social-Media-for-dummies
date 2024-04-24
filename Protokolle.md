@@ -22,4 +22,5 @@ Das Styling der Hauptseiten mit CSS hängt ebenfalls von der Entscheidung zur Fi
 
 ##### Projektzeitplan
 Der voraussichtliche Abschluss des Frontends wird in der Kalenderwoche 17 oder 18 erwartet, abhängig davon, wann die Entscheidung bezüglich der Figma-Lizenz getroffen wird.
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
