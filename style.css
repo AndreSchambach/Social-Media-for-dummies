@@ -1,0 +1,48 @@
+body {
+    background-color: #D3D4E2;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+.grauer-balken {
+    height: 50px; /* Höhe des Balkens */
+    background-color: gray; /* Farbe des Balkens */
+    position: fixed; /* Positionierung des Balkens: 'fixed' fixiert den Balken oben im Viewport */
+    top: 0; /* Positionierung des Balkens: 'top: 0' setzt den Balken an den oberen Rand des Viewports */
+    width: 100%; /* Breite des Balkens: '100%' erstreckt den Balken über die gesamte Breite des Viewports */
+    z-index: 1000; /* Positionierungsebene des Balkens: 'z-index: 1000' stellt sicher, dass der Balken über anderen Elementen angezeigt wird */
+    display: flex; /* Aktiviert Flexbox-Layout */
+    align-items: center; /* Vertikale Ausrichtung der Flex-Items */
+}
+.bild-container {
+    display: flex;
+    align-items: center;
+    display: flex; /* Aktiviert Flexbox-Layout */
+    align-items: center; /* Vertikale Ausrichtung der Bilder */
+    width: 25%; /* Breite: 25% für jedes Bild */
+    margin: 0 5px; /* Optionaler Abstand zwischen Bildern */
+}
+  
+.text-container {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+.nav-balken {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: gray; /* Balkenfarbe */
+    color: white;
+    text-align: center;
+    z-index: 1000;
+    display: flex; /* Aktiviert Flexbox-Layout */
+    justify-content: space-between; /* Verteilt Flex-Items gleichmäßig mit Abstand */
+    align-items: center; /* Vertikale Ausrichtung der Flex-Items */
+  }
+#kleinesbild {
+    width: 20px;
+    height: 20px;
+}
+
