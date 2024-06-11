@@ -1,4 +1,3 @@
-/**/
 body {
     margin: 0;
     padding: 0;
@@ -211,15 +210,15 @@ footer {
 	justify-content: space-between;
 	position: relative;
 	border-top: none;
-	border-color: #3d3d3d;
+	border-color: #606368;
 	width: 100%; 
 }
 
 .nav {
 	text-align: center;
-	width: 25%;
+	width: 34%;
     height: 4%;
-	background-color: #3d3d3d;
+	background-color: #606368;
     color: #FFFFFF;
 	border: none;
 	padding-top: 10px;
@@ -238,3 +237,60 @@ footer {
 	color: #04AA6D;
 }
 
+.bild-container {
+    display: flex;
+    align-items: center;
+    display: flex; /* Aktiviert Flexbox-Layout */
+    align-items: center; /* Vertikale Ausrichtung der Bilder */
+    width: 25%; /* Breite: 25% für jedes Bild */
+    margin: 0 5px; /* Optionaler Abstand zwischen Bildern */
+}
+
+.grauer-balken {
+    height: 7%; /* Höhe des Balkens */
+    background-color: gray; /* Farbe des Balkens */
+    position: fixed; /* Positionierung des Balkens: 'fixed' fixiert den Balken oben im Viewport */
+    top: 0; /* Positionierung des Balkens: 'top: 0' setzt den Balken an den oberen Rand des Viewports */
+    width: 100%; /* Breite des Balkens: '100%' erstreckt den Balken über die gesamte Breite des Viewports */
+    z-index: 1000; /* Positionierungsebene des Balkens: 'z-index: 1000' stellt sicher, dass der Balken über anderen Elementen angezeigt wird */
+    display: flex; /* Aktiviert Flexbox-Layout */
+    align-items: center; /* Vertikale Ausrichtung der Flex-Items */
+}
+
+#linie {
+    background: rgb(255, 255, 255, 0.3);
+    position: fixed;
+    top: 4.9%;
+    left: 6.5%;
+    width: 88%;
+    height: 0.15%;
+}
+
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 9%;
+  }
+  
+  .verlinkung_nav {
+    float: left;
+  }
+  
+  .verlinkung_nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  .verlinkung_nav a:hover {
+    background-color: #111;
+  }
