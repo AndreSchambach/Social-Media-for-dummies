@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung - Social Media Plattform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-form {
+            background-color: #D3D4E2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .login-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .login-form .form-group {
+            margin-bottom: 15px;
+        }
+        .login-form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login-form .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #3D3D3D;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: 3D3D3D;
+        }
+    </style>
+    <body>
+        <div class="login-form">
+            <h1>Login</h1>
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" name="email" id="email" required></input>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort:</label>
+                    <input type="password" name="password" id="password"></input>
+                </div>
+                <button class="form-group" type="submit">Einloggen</button>
+                <div class="form-group">
+                    <a href="file:///C:/Users/mattesm/Desktop/Kolloqium%202/Registrierung.html" title="Zur Registrierung">Noch keinen Account? Hier gehts zur Registrierung</a>
+                </div>
+            </form>
+        </div>    
+    </body>
