@@ -62,11 +62,14 @@ def upload(request):
 
         # Daten für die Vorlage vorbereiten
         for datei, werte in data.items():
-            if len(werte) == 3:
-                titelliste.append(werte[0])  
-                dateiliste.append(datei)     
-                filterliste.append(werte[2]) 
-                textliste.append(werte[1]) 
+            try:
+                if len(werte) == 3:
+                    titelliste.append(werte[0])  
+                    dateiliste.append(datei)     
+                    filterliste.append(werte[2]) 
+                    textliste.append(werte[1])
+            except:
+                continue
 
         return render(request, r"uploadApp/test.html",
                       {}
