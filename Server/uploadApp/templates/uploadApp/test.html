@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>hi</p>
 
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" id="titel" name="titel" placeholder="Titel">
+
+        <label for="file">Select a file:</label>
+        <input type="file" id="file" name="file">
+
+        <input type="checkbox" value="fb" class="tag">
+        <label class="tag-label1">Fußball</label>
+
+        <input type="checkbox" value="bb" class="tag">			
+        <label class="tag-labe2">Basketball</label>
+
+        <input type="checkbox" value="gg" class="tag">
+        <label class="tag-label1">Gaming</label>		
+
+        <input type="checkbox" value="bd" class="tag">
+        <label class="tag-labe2">Bouldern</label>
+
+        <input type="text" id="text" name="text">
+
+        <input type="submit" value="Upload">
+    </form>
+
+    <p>{{ antwort }}</p>
+ 
+    {% for bild, text in data %}
+        <p>{{bild}}</p>
+        <text>{{text}}</text>
+    {% endfor %}
+</body>
+</html>

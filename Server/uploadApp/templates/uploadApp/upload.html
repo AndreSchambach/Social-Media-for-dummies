@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Hobby | Upload</title>
+    
+    <link rel="stylesheet" href="{% static 'css/upload.css' %}">
+</head>
+
+  </style>
+</head>
+
+<body>
+	<header>
+		<div class="cl-abup">
+			<div class="cl-abbruch">
+				<button class="cl-ab-button" onclick="history.back()">
+					X
+				</button>
+			</div>
+			
+			<div class="cl-upload">
+				<button type="submite" class="cl-up-button" form="id-form">
+					Upload
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<article>
+		<div class="cl-inhalt">
+			<div class="cl-titel">
+				<form method="post" enctype="multipart/form-data" id="id-form">
+                    {% csrf_token %}
+                    <input type="text" id="titel" name="titel" placeholder="Titel" required>
+			</div>
+			
+			
+                <div class="cl-bivi">
+                    <label for="datei">Datei hinzufügen:</label>
+                    <input type="file" id="iddatei" name="file"> 
+                </div>
+                
+                
+                <div class="cl-tag">
+                    <div class="tag-seperation1"> 
+                        <input type="checkbox" name="filter" value="fb" class="tag" checked="checked">
+                        <label class="tag-label1">Fußball</label>
+                            
+                        <input type="checkbox" name="filter" value="bb" class="tag">			
+                        <label class="tag-labe2">Basketball</label>
+                    </div>
+                    
+                    <div class="tag-seperation2">	
+                        <input type="checkbox" name="filter" value="gg" class="tag">
+                        <label class="tag-label1">Gaming</label>				
+                    
+                        <input type="checkbox" name="filter" value="bd" class="tag">
+                        <label class="tag-labe2">Bouldern</label>
+                    </div>
+                </div>
+                
+                
+            <div class="cl-text">
+                    <textarea id="text" name="text" placeholder="Schreibe etwas.."></textarea>
+                </form>
+            </div>
+	</article>
+
+	<footer>
+		<div class="cl-nav">
+			<div class="nav" id="id-home">
+				<a href="upload.html" class="nav-link">
+					Home-Seite
+				</a>
+			</div>
+			
+			<div class="nav" id="id-upload">
+				<a href="upload.html" class="nav-link">
+					Upload-Seite
+				</a>
+			</div>
+			
+			<div class="nav" id="id-profil">
+				<a href="upload.html" class="nav-link">
+					Profil-Seite
+				</a>
+			</div>
+		</div>
+	</footer>
+</body>
