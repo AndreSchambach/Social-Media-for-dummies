@@ -3,21 +3,6 @@ from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
 import os, json
 
-#1. os.listdir() -> Alle Dateien im Ordner
-#2. Überprüfen was die größte Zahl ist (hier os.path.splitext(name)[1])
-#3. Größte Zahl +1 als neue ID
-#4. Dateiendung wieder hinzufügen (als string)
-#5. myfile.name oder name verändern myfile.name = änderung
-
-#Wenn eine Datei hochgeladen wird: 
-#1. überprüft welche Dateinamen schon vergeben sind 
-#2. Die Datei mit einer ID versehen die noch nicht vergeben ist 
-#3. Die Datei mit der entsprechenden ID als Name gespeichert
-#Wichtiger befehl: os.path.splitext(name)[1] anstelle von name der Bildname
-
-#json datei mit Bildname + Kommentar {Bild.png: "hallo"}
-
-
 def upload(request):
     print(os.getcwd())
 
