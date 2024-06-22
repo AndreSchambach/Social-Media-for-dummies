@@ -121,12 +121,12 @@ def home(request):
             text = data[eintrag]
             textliste.append(text)
 
-        return render(request, r"\Users\sinan\Desktop\Server\uploadApp\templates\uploadApp\test.html",
+        return render(request, r"uploadApp\test.html",
                       {
                           "antwort": "Datei wurde hochgeladen",
                           "bilderliste": bilderliste,
                           "textliste": textliste
                       })
     else:
-        return render(request, r"\Users\sinan\Desktop\Server\uploadApp\templates\uploadApp\test.html", 
+        return render(request, r"uploadApp\test.html", 
                       {})
