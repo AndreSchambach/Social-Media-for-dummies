@@ -1,0 +1,156 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    height: 100vh; /* Ganzer Bildschirm */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Banner oben, Navigation unten */
+    height: 100%; /* Ganzer Bereich wird gefüllt */
+    width: 100%; /* Ganzer Breite */
+    background-color: #ffcccc; 
+}
+
+
+#idBanner {
+    background-color: #4a90e2; 
+    text-align: center;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;  
+    width: auto;
+    height: 140px;
+    left: 0px;
+    top: 150px;
+    
+}
+
+.social-media {
+    position: absolute; /* Positionierung relativ zum Banner */
+    top: 20px; /* Mittig auf der Höhe */
+    right: 70px; /* Etwas Abstand von rechts */
+    font-size: 14px; /* Kleinere Schriftart */
+    width:135px;
+    height: 100px;
+    border: solid black;
+    border-radius: 10%;
+    background-color: #CAD4E4;
+    text-align: left;
+}
+
+
+#idKreis {
+    position: absolute; /* Absolut positioniert innerhalb des Containers */
+    top: 70px; 
+    left: 10%; 
+    border: solid;
+    width: 130px;
+    height: 130px;
+    background-color: green;
+    border-radius: 50%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+#idBildEingabeKreis, #idBildEingabeBanner  {
+    display: none; 
+}
+
+
+#text-section {
+    height: 244px;
+    background-color: white;
+}
+.bio {
+    position: absolute; /* Positionierung relativ zum Banner */
+    top: 167px; /* Mittig auf der Höhe */
+    right: 70px; /* Etwas Abstand von rechts */
+    font-size: 14px; /* Kleinere Schriftart */
+    width:203px;
+    height: 170px;
+    border: solid black;
+    background-color: #CAD4E4;
+    text-align: left;
+    
+
+}
+#button-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #333; 
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    width: 130px;
+    height: 50px;
+    background-color: white;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: center; /* Zentriert das Icon */
+    
+}
+
+button:hover {
+    background-color: #aaa2a2; /* Hover-Farbe */
+}
+
+#buttonBell {
+    background-image: url("../icons/GlockeIcon (20240423120947).png");
+}
+
+#buttonLike {
+    background-image: url("../icons/LikeIcon1 (20240423111032).png");
+}
+
+#buttonPen {
+    background-image: url("../icons/StiftIcon (20240423112616).png");
+}
+
+
+
+#feed {
+    flex-grow: 1; /* Füllt den restlichen Raum */
+    padding: 20px;
+    text-align: center; 
+    background-color:#CAD4E4;
+}
+
+/* Navigationsleiste unten */
+footer {
+    width: 100%;
+}
+
+#navigation-bar {
+    background-color: #333; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+#navigation-bar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#navigation-bar a:hover {
+    text-decoration: underline; /* Hover-Effekt */
+}
+
