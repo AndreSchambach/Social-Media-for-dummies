@@ -1,0 +1,57 @@
+[
+    
+    {
+        "benutzer": "Mustermann",
+        "bild": "",
+        "kommentar": "EinsZweiDrei",
+        "likes": [],
+        "erstellt_am": "2024-06-22T13:30:58.168102"
+    },
+    {
+        "benutzer": "Schambach",
+        "bild": "/images/d3856070-b6d0-4472-b3c8-07bbe5fba065.png",
+        "kommentar": "Test 12345",
+        "likes": [],
+        "erstellt_am": "2024-06-25T13:32:19.502595"
+    },
+    {
+        "benutzer": "Musterfrau",
+        "bild": "images/45150b8d-27d4-491c-8ba8-8678dd56a4a8.png",
+        "kommentar": "5452353445454",
+        "likes": [],
+        "erstellt_am": "2024-06-25T14:19:12.159464"
+    },
+    {
+        "benutzer": "Schambach",
+        "bild": "images/c918a874-4827-41a9-b175-0ea0fcec12ec.png",
+        "kommentar": "12314124131",
+        "likes": [],
+        "erstellt_am": "2024-06-26T13:43:46.454308"
+    },
+    {
+        "benutzer": "Muster",
+        "bild": "images/3ac67d1e-00c0-4f32-a1de-0722fd4bbc98.png",
+        "kommentar": "asdijasd",
+        "likes": [],
+        "erstellt_am": "2024-06-26T14:35:46.792629"
+    },
+    {
+        "benutzer": "Mustermann",
+        "bild": "images/66c6dc98-d378-458d-b902-9c82064431ce.png",
+        "kommentar": "Komemenasdt",
+        "titel": "Standard Titel",
+        "hobby": "Kein Hobby ausgew\u00e4hlt",
+        "likes": [],
+        "erstellt_am": "2024-06-28T16:47:09.036480"
+    },
+    {
+        "id": "4bf8558d-16e0-4c38-b804-1a86e07e2acb",
+        "benutzer": "Mustermann",
+        "bild": "images/b295854b-6a0a-4dd7-82ca-8635d6519f8e.png",
+        "kommentar": "Joa, wir sin mim radel doa",
+        "titel": "Test meinHobby1",
+        "hobby": "radfahren",
+        "likes": [],
+        "erstellt_am": "2024-06-29T10:09:30.370721"
+    }
+]

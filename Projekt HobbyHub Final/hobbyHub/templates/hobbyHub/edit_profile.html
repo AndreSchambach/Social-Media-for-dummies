@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil bearbeiten</title>
+    <link rel="stylesheet" href="{% static 'css/edit_profile.css' %}">
+</head>
+<body>
+
+    <header>
+        <div class="klasse-ablaufleiste">
+            <div class="klasse-abbruch">
+                <button class="klasse-abbruch-button" onclick="history.back()">X</button>
+            </div>
+            <div class="klasse-hochladen">
+                <button type="submit" class="klasse-speichern-button" form="id-form">Speichern</button>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <div class="container">
+            <h1>Profil bearbeiten</h1>
+            <form method="post" id="id-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="klasse-dateihinzufuegen">
+                    <label for="bannerbild">Bannerbild hochladen:</label>
+                    <input type="file" id="bannerbild" name="bannerbild" accept="image/*">
+                </div>
+
+                <div class="klasse-dateihinzufuegen">
+                    <label for="profilbild">Profilbild hochladen:</label>
+                    <input type="file" id="profilbild" name="profilbild" accept="image/*">
+                </div>
+
+                <div class="klasse-social_media">
+                    <label for="social_media">Social Media Links:</label>
+                    <textarea id="social_media" name="social_media" maxlength="100">{{ form.social_media.value }}</textarea>
+                </div>
+
+                <div class="klasse-bio">
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="bio" maxlength="150">{{ form.bio.value }}</textarea>
+                </div>
+            </form>
+        </div>
+    </article>
+</body>
+</html>

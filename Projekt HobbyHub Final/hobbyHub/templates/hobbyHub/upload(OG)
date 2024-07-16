@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/upload.css' %}">
+</head>
+<body>
+    <div class="flex-container">
+        <header>
+            <h1>Beitrag hochladen</h1>
+        </header>
+
+        <section id="content">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="bild">Bild hochladen:</label>
+                <input type="file" id="bild" name="bild" accept="image/*">
+
+                <label for="kommentar">Kommentar:</label>
+                <textarea id="kommentar" name="kommentar"></textarea>
+
+                <button type="submit">Hochladen</button>
+            </form>
+        </section>
+
+        <footer>
+            <div id="navigation-bar">
+                <a href="{% url 'profile_edit' %}">Profil bearbeiten</a>
+                <a href="{% url 'logout' %}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Abmelden</a>
+                <form id="logout-form" method="post" action="{% url 'logout' %}" style="display:none;">
+                    {% csrf_token %}
+                </form>
+                <a href="{% url 'feed' %}">Home</a>
+                <a href="#about">Über</a>
+                <a href="#contact">Kontakt</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    font-size: 16px;
+}
+
+body {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #3d3d3d;
+    padding: 10px;
+}
+
+.klasse-ablaufleiste {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.klasse-abbruch-button,
+.klasse-speichern-button {
+    text-align: center;
+    width: 120px;
+    background-color: #3d3d3d;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.klasse-abbruch-button:hover,
+.klasse-speichern-button:hover {
+    background-color: #04AA6D;
+    color: #3d3d3d;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.klasse-dateihinzufuegen,
+.klasse-bio,
+.klasse-social_media {
+    border: 2px solid #3d3d3d;
+    background-color: #CAD4E4;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="file"],
+textarea {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    background-color: #CAD4E4;
+    color: #3d3d3d;
+    resize: none;
+    width: 95%;
+
+}
+
+textarea {
+    height: 150px;
+    width: 95%;
+}

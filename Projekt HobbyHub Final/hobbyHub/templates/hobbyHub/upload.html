@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Beitrag hochladen | Hobby</title>
+    <link rel="stylesheet" href="{% static 'css/upload.css' %}">
+</head>
+<body>
+	<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var titelElement = document.getElementById("id_titel");
+            if (titelElement) {
+                titelElement.placeholder = "Geben Sie hier den Titel ein...";
+            }
+            var kommentarElement = document.getElementById("id_kommentar");
+            if (kommentarElement) {
+                kommentarElement.placeholder = "Geben Sie hier Ihren Text zum Post ein...";
+            }
+        });
+    </script>
+
+
+
+    <header>
+        <div class="klasse-ablaufleiste">
+            <div class="klasse-abbruch">
+                <button class="klasse-abbruch-button" onclick="history.back()">X</button>
+            </div>
+            <div class="klasse-hochladen">
+                <button type="submit" class="klasse-hochladen-button" form="id-form">Upload</button>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <form method="post" enctype="multipart/form-data" id="id-form">
+            {% csrf_token %}
+            <div class="klasse-titel">
+                <label for="i_titel" hidden>Titel:</label>
+                {{ form.titel }}
+            </div>
+            <div class="klasse-dateihinzufuegen">
+                <label for="id_bild">Bild hinzufügen:</label>
+                {{ form.bild }}
+            </div>
+            <div class="klasse-hobbyauswahl">
+                <label for="id_hobby">Hobby auswählen:</label>
+                {{ form.hobby }}
+            </div>
+            <div class="klasse-kommentar">
+                <label for="id_kommentar" hidden>Kommentar:</label>
+                {{ form.kommentar }}
+            </div>
+        </form>
+    </article>
+
+    <footer>
+        <div class="klasse-navigation">
+            <div class="navigation-element" id="id-home">
+                <a href="{% url 'feed' %}" class="navigation-link">
+                    <img src="{% static 'icons/home.png' %}" alt="Home" class="nav-icon" width="40" height="40">
+                </a>
+            </div>
+            <div class="navigation-element" id="id-upload">
+                <a href="{% url 'upload' %}" class="navigation-link">
+                    <img src="{% static 'icons/upload.png' %}" alt="Upload" class="nav-icon" id="upload-icon" width="60" height="60">
+                </a>
+            </div>
+            <div class="navigation-element" id="id-profil">
+                <a href="{% url 'profil' %}" class="navigation-link">
+                    <img src="{% static 'icons/profile1.png' %}" alt="Profil" class="nav-icon" width="40" height="40">
+                </a>
+            </div>
+            <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="navigation-button">Abmelden</button>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
