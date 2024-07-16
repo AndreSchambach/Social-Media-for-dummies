@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .filter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .hobbies-grid label {
+            display: flex;
+            align-items: center;
+        }
+
+        .hobbies-grid input {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3d3d3d;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #04AA6D;
+            color: #3d3d3d;
+        }
+    </style>
+</head>
+<body>
+    <div class="filter-container">
+        <h1>Filter Test</h1>
+        <form method="post" action="{% url 'test_view' %}">
+            {% csrf_token %}
+            <div class="hobbies-grid">
+                {% for checkbox in form.hobbies %}
+                    <div>
+                        {{ checkbox }}
+                    </div>
+                {% endfor %}
+            </div>
+            <button type="submit">Filter anwenden</button>
+        </form>
+        <div class="beitraege">
+            {% for beitrag in beitraege %}
+                <div class="post">
+                    <h2>{{ beitrag.titel }}</h2>
+                    <p><strong>Hobby:</strong> {{ beitrag.hobby }}</p>
+                    <p>{{ beitrag.kommentar }}</p>
+                    <p><strong>Von:</strong> {{ beitrag.benutzer }}</p>
+                    {% if beitrag.bild %}
+                        <img src="{{ MEDIA_URL }}{{ beitrag.bild }}" alt="Beitrag Bild">
+                    {% endif %}
+                    <p><strong>Erstellt am:</strong> {{ beitrag.erstellt_am }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

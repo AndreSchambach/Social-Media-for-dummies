@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Feed</title>
+    <link rel="stylesheet" href="{% static 'css/feed.css' %}">
+    <style>
+        #filter-form {
+            display: none;
+            background-color: #CAD4E4;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <header>
+            <h1>HobbyHub Feed</h1>
+            <button onclick="toggleFilter()">Filter anzeigen</button>
+        </header>
+
+        <div id="filter-form">
+            <form method="post">
+                {% csrf_token %}
+                <div class="hobbies-grid">
+                    {{ form.hobbies }}
+                </div>
+                <button type="submit">Filter anwenden</button>
+            </form>
+        </div>
+
+        <section id="content">
+            {% for beitrag in beitraege %}
+                <div class="post">
+                    <div class="post-header">
+                        <a href="{% url 'benutzer_profil' beitrag.benutzer %}">
+                            {% if beitrag.profilbild %}
+                                <img src="{{ MEDIA_URL }}{{ beitrag.profilbild }}" alt="Profilbild von {{ beitrag.benutzer }}" class="profilbild">
+                            {% else %}
+                                <img src="{% static 'icons/user.png' %}" alt="Standard Profilbild" class="profilbild">
+                            {% endif %}
+                        </a>
+                        <h2>{{ beitrag.titel }}</h2>
+                    </div>
+                    <p><strong>Hobby:</strong> {{ beitrag.hobby }}</p>
+                    {% if beitrag.bild %}
+                        <img src="{{ MEDIA_URL }}{{ beitrag.bild }}" alt="Beitrag Bild">
+                    {% endif %}
+                    <p>{{ beitrag.kommentar }}</p>
+                    <p><strong>Von:</strong> {{ beitrag.benutzer }}</p>
+                    <form action="{% url 'like_post' beitrag.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="like-button">
+                            {% if request.user.username in beitrag.likes %}
+                                <img src="{% static 'icons/LikeIcon2 rot.png' %}" alt="Liked">
+                            {% else %}
+                                <img src="{% static 'icons/LikeIcon1 grau.png' %}" alt="Like">
+                            {% endif %}
+                            (<span class="like-count">{{ beitrag.likes|length }}</span>)
+                        </button>
+                    </form>
+                    <p><strong>Erstellt am:</strong> {{ beitrag.erstellt_am }}</p>
+
+                    <div class="comments">
+                        <h3>Kommentare:</h3>
+                        {% for comment in beitrag.comments %}
+                        <div class="comment">
+                            <p><strong>{{ comment.benutzer }}:</strong> {{ comment.text }}</p>
+                            <p class="timestamp" style="font-size: x-small;">{{ comment.erstellt_am }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <button class="comment-button" onclick="openCommentPopup('{{ beitrag.id }}')">
+                        <img src="{% static 'icons/KommentarIcon.png' %}" alt="Kommentar hinzufügen">
+                    </button>
+                </div>
+            {% endfor %}
+        </section>
+        <footer>
+            <div class="klasse-navigation">
+                <div class="navigation-element" id="id-home">
+                    <a href="{% url 'feed' %}" class="navigation-link">
+                        <img src="{% static 'icons/home.png' %}" alt="Home" class="nav-icon" width="24" height="24">
+                    </a>
+                </div>
+                <div class="navigation-element" id="id-upload">
+                    <a href="{% url 'upload' %}" class="navigation-link">
+                        <img src="{% static 'icons/upload.png' %}" alt="Upload" class="nav-icon" id="upload-icon" width="24" height="24">
+                    </a>
+                </div>
+                <div class="navigation-element" id="id-profil">
+                    <a href="{% url 'profil' %}" class="navigation-link">
+                        <img src="{% static 'icons/profile1.png' %}" alt="Profil" class="nav-icon" width="24" height="24">
+                    </a>
+                </div>
+                <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="navigation-button">Abmelden</button>
+                </form>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Comment Popup -->
+    <div id="comment-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" onclick="closeCommentPopup()">&times;</span>
+            <form id="comment-form" method="post">
+                {% csrf_token %}
+                <h2>Kommentar hinzufügen</h2>
+                <div class="form-group">
+                    <label for="comment-text">Kommentar:</label>
+                    <textarea id="comment-text" name="text" rows="3" cols="40" class="form-control"></textarea>
+                </div>
+                <button type="submit">Kommentar hinzufügen</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleFilter() {
+            var filterForm = document.getElementById('filter-form');
+            if (filterForm.style.display === 'none' || filterForm.style.display === '') {
+                filterForm.style.display = 'block';
+            } else {
+                filterForm.style.display = 'none';
+            }
+        }
+
+        function openCommentPopup(beitragId) {
+            var commentForm = document.getElementById('comment-form');
+            commentForm.action = '/add_comment/' + beitragId + '/';
+            document.getElementById('comment-popup').style.display = 'flex';
+        }
+
+        function closeCommentPopup() {
+            document.getElementById('comment-popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

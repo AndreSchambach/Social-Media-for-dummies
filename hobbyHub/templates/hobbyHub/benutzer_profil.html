@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ benutzer_profil.benutzer }}'s Profil</title>
+    <link rel="stylesheet" href="{% static 'css/benutzer_profil.css' %}">
+</head>
+<body>
+    <div class="profil-container">
+        <div id="idBanner">
+            {% if benutzer_profil.bannerbild %}
+                <img src="{{ MEDIA_URL }}{{ benutzer_profil.bannerbild }}" alt="Profilbanner von {{ benutzer_profil.benutzer }}" style="width: 100%; height: 100%; object-fit: cover;">
+            {% endif %}
+        </div>
+        <div id="idKreis">
+            {% if benutzer_profil.profilbild %}
+                <img src="{{ MEDIA_URL }}{{ benutzer_profil.profilbild }}" alt="Profilbild von {{ benutzer_profil.benutzer }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            {% else %}
+                <img src="{% static 'icons/user.png' %}" alt="Standard Profilbild" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            {% endif %}
+        </div>
+        <h1>{{ benutzer_profil.benutzer }}</h1>
+        <div class="profil-details">
+            <p><strong>Bio:</strong> {{ benutzer_profil.bio }}</p>
+            <p><strong>Social Media:</strong> {{ benutzer_profil.social_media }}</p>
+            <form action="{% url 'follow_user' benutzer_profil.benutzer %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="like-button">
+                    {% if request.user.username in benutzer_profil.followers %}
+                        <img src="{% static 'icons/LikeIcon2 rot.png' %}" alt="Following">
+                    {% else %}
+                        <img src="{% static 'icons/LikeIcon1 grau.png' %}" alt="Follow">
+                    {% endif %}
+                </button>
+            </form>
+            <p><strong>Follower:</strong> {{ benutzer_profil.followers|length }}</p>
+        </div>
+    </div>
+
+    <section id="feed">
+        {% for beitrag in beitraege %}
+        <div class="post">
+            <div class="post-header">
+                <a href="{% url 'benutzer_profil' beitrag.benutzer %}">
+                    {% if beitrag.profilbild %}
+                    <img src="{{ MEDIA_URL }}{{ beitrag.profilbild }}" alt="Profilbild von {{ beitrag.benutzer }}" class="profilbild">
+                    {% else %}
+                    <img src="{% static 'icons/user.png' %}" alt="Standard Profilbild" class="profilbild">
+                    {% endif %}
+                </a>
+                <h2>{{ beitrag.titel }}</h2>
+            </div>
+            <p><strong>Hobby:</strong> {{ beitrag.hobby }}</p>
+            {% if beitrag.bild %}
+            <img src="{{ MEDIA_URL }}{{ beitrag.bild }}" alt="Beitrag Bild">
+            {% endif %}
+            <p>{{ beitrag.kommentar }}</p>
+            <p><strong>Von:</strong> {{ beitrag.benutzer }}</p>
+            <p><strong>Erstellt am:</strong> {{ beitrag.erstellt_am }}</p>
+            <div class="comments">
+                <h3>Kommentare:</h3>
+                {% for comment in beitrag.comments %}
+                <div class="comment">
+                    <p><strong>{{ comment.benutzer }}:</strong> {{ comment.text }}</p>
+                    <p class="timestamp">{{ comment.erstellt_am }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <form action="{% url 'like_post' beitrag.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="like-button">
+                    {% if request.user.username in beitrag.likes %}
+                    <img src="{% static 'icons/LikeIcon2 rot.png' %}" alt="Liked">
+                    {% else %}
+                    <img src="{% static 'icons/LikeIcon1 grau.png' %}" alt="Like">
+                    {% endif %}
+                    (<span class="like-count">{{ beitrag.likes|length }}</span>)
+                </button>
+            </form>
+        </div>
+        {% endfor %}
+    </section>
+
+    <footer>
+        <div class="klasse-navigation" style="height: 80px">
+            <div class="navigation-element" id="id-home">
+                <a href="{% url 'feed' %}" class="navigation-link">
+                    <img src="{% static 'icons/home.png' %}" alt="Home" class="nav-icon">
+                </a>
+            </div>
+            <div class="navigation-element" id="id-upload">
+                <a href="{% url 'upload' %}" class="navigation-link">
+                    <img src="{% static 'icons/upload.png' %}" alt="Upload" class="nav-icon" id="upload-icon">
+                </a>
+            </div>
+            <div class="navigation-element" id="id-profil">
+                <a href="{% url 'profil' %}" class="navigation-link">
+                    <img src="{% static 'icons/profile1.png' %}" alt="Profil" class="nav-icon" >
+                </a>
+            </div>
+            <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="navigation-button">Abmelden</button>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="login-form">
+        <img src="{% static 'icons/HobbyHubIcon.png' %}" alt="Logo HobbyHub">
+        <h1>Login</h1>
+        <form action="/login/" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Benutzername:</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Passwort:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <button class="form-group" type="submit">Einloggen</button>
+            <div class="form-group">
+                <a href="{% url 'registrierung' %}" title="Zur Registrierung">Noch keinen Account? Hier gehts zur Registrierung</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

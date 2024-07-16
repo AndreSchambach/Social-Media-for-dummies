@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profilseite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Test.css' %}">
+    <script>
+        function redirectToProfileEdit() {
+            window.location.href = "{% url 'profile_edit' %}";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="flex-container">
+        <header>
+            <div id="idBanner"
+                style="background-image: url('{% if profil.bannerbild %}{{ MEDIA_URL }}{{ profil.bannerbild }}{% endif %}')">
+                <div class="social-media">
+                    <ul>
+                        {% if profil.social_media %}
+                        {% for link in profil.social_media.splitlines %}
+                        <li>{{ link }}</li>
+                        {% endfor %}
+                        {% else %}
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>LinkedIn</li>
+                        <li>Reddit</li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div id="idKreis">
+            {% if profil.profilbild %}
+            <img src="{{ MEDIA_URL }}{{ profil.profilbild }}" alt="Profilbild"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            {% else %}
+            <img src="{% static 'icons/user.png' %}" alt="Standard Profilbild"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            {% endif %}
+        </div>
+
+
+        <section id="content">
+            <div id="text-section">
+                <h2 class="benutzername">{{ profil.benutzer }}</h2> <!-- Benutzername unter dem Profilbild -->
+                <div class="bio">
+                    {% if profil.bio %}
+                    <p>{{ profil.bio }}</p>
+                    {% else %}
+                    <p>Keine Bio verfügbar.</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div id="button-section">
+               <!-- <button id="buttonBell"></button>
+                <button id="buttonLike"></button> -->
+                <button id="buttonPen" onclick="redirectToProfileEdit()"></button>
+            </div>
+        </section>
+
+        <section id="feed">
+            {% for beitrag in beitraege %}
+            <div class="post">
+                <div class="post-header">
+                    <a href="{% url 'benutzer_profil' beitrag.benutzer %}">
+                        {% if beitrag.profilbild %}
+                        <img src="{{ MEDIA_URL }}{{ beitrag.profilbild }}" alt="Profilbild von {{ beitrag.benutzer }}"
+                            class="profilbild">
+                        {% else %}
+                        <img src="{% static 'icons/user.png' %}" alt="Standard Profilbild" class="profilbild">
+                        {% endif %}
+                    </a>
+                    <h2>{{ beitrag.titel }}</h2>
+                </div>
+                <p><strong>Hobby:</strong> {{ beitrag.hobby }}</p>
+                {% if beitrag.bild %}
+                <img src="{{ MEDIA_URL }}{{ beitrag.bild }}" alt="Beitrag Bild">
+                {% endif %}
+                <p>{{ beitrag.kommentar }}</p>
+                <p><strong>Von:</strong> {{ beitrag.benutzer }}</p>
+                <p><strong>Erstellt am:</strong> {{ beitrag.erstellt_am }}</p>
+                <div class="comments">
+                    <h3>Kommentare:</h3>
+                    {% for comment in beitrag.comments %}
+                    <div class="comment">
+                        <p><strong>{{ comment.benutzer }}:</strong> {{ comment.text }}</p>
+                        <p class="timestamp">{{ comment.erstellt_am }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <form action="{% url 'like_post' beitrag.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="like-button">
+                        {% if request.user.username in beitrag.likes %}
+                        <img src="{% static 'icons/LikeIcon2 rot.png' %}" alt="Liked">
+                        {% else %}
+                        <img src="{% static 'icons/LikeIcon1 grau.png' %}" alt="Like">
+                        {% endif %}
+                        (<span class="like-count">{{ beitrag.likes|length }}</span>)
+                    </button>
+                </form>
+
+            </div>
+            {% endfor %}
+        </section>
+
+        <footer>
+            <div class="klasse-navigation">
+                <div class="navigation-element" id="id-home">
+                    <a href="{% url 'feed' %}" class="navigation-link">
+                        <img src="{% static 'icons/home.png' %}" alt="Home" class="nav-icon" width="40" height="40">
+                    </a>
+                </div>
+                <div class="navigation-element" id="id-upload">
+                    <a href="{% url 'upload' %}" class="navigation-link">
+                        <img src="{% static 'icons/upload.png' %}" alt="Upload" class="nav-icon" id="upload-icon" width="60" height="60">
+                    </a>
+                </div>
+                <div class="navigation-element" id="id-profil">
+                    <a href="{% url 'profil' %}" class="navigation-link">
+                        <img src="{% static 'icons/profile1.png' %}" alt="Profil" class="nav-icon" width="40" height="40">
+                    </a>
+                </div>
+                <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="navigation-button">Abmelden</button>
+                </form>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

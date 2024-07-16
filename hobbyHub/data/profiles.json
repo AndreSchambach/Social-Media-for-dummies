@@ -1,0 +1,53 @@
+[
+    {
+        "benutzer": "Andre",
+        "bio": "Andr\u00e9 liebt das Fahrradfahren als Hobby. An Wochenenden und in seiner Freizeit genie\u00dft er es, neue Strecken zu erkunden und die Freiheit auf zwei R\u00e4de",
+        "social_media": "t.ly/vQ4Wj",
+        "profilbild": "profile_images/742e0a6e-f5a4-4c9d-b0db-73a207490158.png",
+        "bannerbild": "banner_images/a9d23895-8e04-469b-abfc-5dafc8e1aa89.png"
+    },
+    {
+        "benutzer": "Marius",
+        "bio": "Willkommen auf meiner Seite...\r\nHier werde ich euch \u00fcber meine Hobbys auf dem laufenden halten",
+        "social_media": "Insta: marius_mattes",
+        "profilbild": "profile_images/6329a916-4f77-4639-908a-af29e73e837c.jpg",
+        "bannerbild": "banner_images/01c4e02e-32e4-44c8-bd06-fc4c5362873b.jpg",
+        "followers": [
+            "Tim"
+        ]
+    },
+    {
+        "benutzer": "FelixDVM",
+        "bio": "Ich bin DVM Student!",
+        "social_media": "https://www.twitch.tv/montanablack88",
+        "profilbild": "profile_images/3122dc70-f891-40dc-94f3-d6be5e69d312.png",
+        "bannerbild": "banner_images/f12e5f0f-061d-4f91-8f3e-cf41b451917d.png"
+    },
+    {
+        "benutzer": "Sin",
+        "bio": "Basketball ist mein Lieblingssport. Zudem lese ich gerne Kurzgeschichten.",
+        "social_media": "t.ly/eqVf8",
+        "profilbild": "profile_images/6b2b6b32-2f2d-468f-9d38-1033d0088a2a.png",
+        "bannerbild": "banner_images/3460c779-7182-48da-8b70-0e5234fe96ae.jpg",
+        "followers": [
+            "Marius"
+        ]
+    },
+    {
+        "benutzer": "Laura",
+        "bio": "Hallo :)",
+        "social_media": "None",
+        "profilbild": "",
+        "bannerbild": ""
+    },
+    {
+        "benutzer": "Tim",
+        "bio": "None",
+        "social_media": "None",
+        "profilbild": "profile_images/e927496e-6b71-49c9-981f-c64de5f58e44.jpg",
+        "bannerbild": "banner_images/7622987d-93fa-47b8-b3b1-08b203ec6d40.jpg",
+        "followers": [
+            "Marius"
+        ]
+    }
+]

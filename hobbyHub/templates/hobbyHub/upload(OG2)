@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Beitrag hochladen | Hobby</title>
+    <link rel="stylesheet" href="{% static 'css/upload.css' %}">
+</head>
+<body>
+    <header>
+        <div class="klasse-ablaufleiste">
+            <div class="klasse-abbruch">
+                <button class="klasse-abbruch-button" onclick="history.back()">X</button>
+            </div>
+            <div class="klasse-hochladen">
+                <button type="submit" class="klasse-hochladen-button" form="id-form">Upload</button>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <form method="post" enctype="multipart/form-data" id="id-form">
+            {% csrf_token %}
+            <div class="klasse-titel">
+                <label for="id_titel">Titel:</label>
+                {{ form.titel }}
+            </div>
+            <div class="klasse-dateihinzufuegen">
+                <label for="id_bild">Datei hinzufügen:</label>
+                {{ form.bild }}
+            </div>
+            <div class="klasse-hobbyauswahl">
+                <label for="id_hobby">Hobby auswählen:</label>
+                {{ form.hobby }}
+            </div>
+            <div class="klasse-kommentar">
+                <label for="id_kommentar">Kommentar:</label>
+                {{ form.kommentar }}
+            </div>
+        </form>
+    </article>
+
+    <footer>
+        <div class="klasse-navigation">
+            <div class="navigation-element" id="id-home">
+                <a href="{% url 'feed' %}" class="navigation-link">Home-Seite</a>
+            </div>
+            <div class="navigation-element" id="id-upload">
+                <a href="{% url 'upload' %}" class="navigation-link">Upload-Seite</a>
+            </div>
+            <div class="navigation-element" id="id-profil">
+                <a href="{% url 'profil' %}" class="navigation-link">Profil-Seite</a>
+            </div>
+            <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="navigation-button">Abmelden</button>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>

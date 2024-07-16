@@ -1,0 +1,297 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:#FFFFFF;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #3d3d3d;
+}
+
+article, #content {
+    flex: 1;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #3d3d3d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.klasse-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #3d3d3d;
+}
+
+.navigation-element {
+    text-align: center;
+    flex-grow: 1;
+    background-color: #3d3d3d;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.navigation-link {
+    color: #FFFFFF;
+    border: none;
+    text-decoration: none;
+}
+
+.navigation-link:hover {
+    text-decoration: underline;
+    color: #04AA6D;
+}
+
+.navigation-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3d3d3d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+}
+
+.navigation-button:hover {
+    background-color: #04AA6D;
+    color: #3d3d3d;
+}
+
+#idBanner {
+    background-color: #4a90e2; 
+    text-align: center;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;  
+    width: 100%; 
+    height: 140px;
+}
+
+.social-media {
+    position: absolute;
+    top: 20px; 
+    right: 70px; 
+    font-size: 14px; 
+    width: 135px;
+    height: 100px;
+    border: solid black;
+    border-radius: 10%;
+    background-color: #CAD4E4;
+    text-align: left;
+}
+
+#idKreis {
+    position: absolute;
+    top: 70px; 
+    left: 10%; 
+    border: solid;
+    width: 130px;
+    height: 130px;
+    background-color: green;
+    border-radius: 50%; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+#idBildEingabeKreis, #idBildEingabeBanner {
+    display: none; 
+}
+
+#text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Vertikal zentrieren */
+    text-align: center; /* Text zentrieren */
+    height: 244px;
+    background-color: white;
+}
+
+.bio {
+    position: absolute;
+    top: 167px; 
+    right: 70px; 
+    font-size: 14px;
+    width: 203px;
+    height: 170px;
+    border: solid black;
+    background-color: #CAD4E4;
+    text-align: left;
+}
+
+#button-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #333; 
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    width: 130px;
+    height: 50px;
+    background-color: white;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: center;
+}
+
+button:hover {
+    background-color: #aaa2a2; 
+}
+
+#buttonBell {
+    background-image: url("../icons/GlockeIcon (20240423120947).png");
+}
+
+#buttonLike {
+    background-image: url("../icons/LikeIcon1 (20240423111032).png");
+}
+
+#buttonPen {
+    background-image: url("../icons/StiftIcon (20240423112616).png");
+}
+
+#feed {
+    flex-grow: 1; 
+    padding: 20px;
+    text-align: center; 
+    background-color: #CAD4E4;
+}
+
+.profil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profil-header {
+    text-align: center;
+}
+
+#idKreis {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profil-details {
+    text-align: center;
+    font-size: 16px;
+}
+
+.post {
+    background-color: #ffffff;
+    border: 2px solid #3d3d3d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.profilbild {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.post h2 {
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+.comments .comment {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #3d3d3d;
+}
+
+.benutzername {
+    margin-top: 10px; 
+    font-size: 36px; 
+    
+}
+.like-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+.nav-icon {
+    width: 40px;  
+    height: 40px; 
+    vertical-align: middle; 
+}
+
+.navigation-element a, .navigation-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-element a img, .navigation-button img {
+    margin-right: 8px; 
+}
+
+#upload-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+}
+
+footer {
+    background-color: #3d3d3d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,185 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    font-size: 16px; /* Standard-Schriftgröße setzen */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #3d3d3d;
+}
+
+article {
+    flex: 1;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #3d3d3d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.klasse-ablaufleiste {
+    margin-bottom: 0px;
+}
+
+.klasse-abbruch {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.klasse-abbruch-button {
+    float: left;
+    text-align: center;
+    width: 25%;
+    height: 4%;
+    background-color: #3d3d3d;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.klasse-abbruch-button:hover {
+    background-color: #04AA6D;
+    color: #3d3d3d;
+}
+
+.klasse-hochladen {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: -4px;
+}
+
+.klasse-hochladen-button {
+    float: right;
+    text-align: center;
+    width: 25%;
+    height: 4%;
+    background-color: #3d3d3d;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.klasse-hochladen-button:hover {
+    background-color: #04AA6D;
+    color: #3d3d3d;
+}
+
+.klasse-titel {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    float: left;
+    border: 2px solid #3d3d3d;
+    width: 100%;
+    height: auto; /* Höhe automatisch anpassen */
+    background-color: #CAD4E4;
+    padding: 10px;
+    font-size: 20px; /* Schriftgröße setzen */
+}
+
+#titel {
+    width: 100%;
+    text-align: left;
+    border: none;
+    color: #3d3d3d;
+    padding: 10px;
+    font-size: 20px; /* Schriftgröße setzen */
+}
+
+.klasse-dateihinzufuegen, .klasse-hobbyauswahl {
+    position: relative;
+    float: left;
+    text-align: left;
+    border: 2px solid #3d3d3d;
+    width: 100%;
+    background-color: #CAD4E4;
+    color: #3d3d3d;
+    padding: 10px;
+    font-size: 20px; /* Schriftgröße setzen */
+}
+
+.klasse-kommentar {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    float: left;
+    border: 2px solid #3d3d3d;
+    width: 100%;
+    height: auto; /* Höhe automatisch anpassen */
+    background-color: #CAD4E4;
+    padding: 10px;
+    font-size: 20px; /* Schriftgröße setzen */
+}
+
+#kommentar {
+    resize: none;
+    width: 98%;
+    font-size: 20px; /* Schriftgröße setzen */
+    font-family: Arial;
+    border: none;
+    padding: 10px;
+}
+
+.klasse-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #3d3d3d;
+}
+
+.navigation-element {
+    text-align: center;
+    width: 25%;
+    height: auto; /* Höhe automatisch anpassen */
+    background-color: #3d3d3d;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-size: 20px; /* Schriftgröße setzen */
+}
+
+.navigation-link {
+    color: #FFFFFF;
+    border: none;
+    text-decoration: none;
+    font-size: 20px; /* Schriftgröße setzen */
+}
+
+.navigation-link:hover {
+    text-decoration: underline;
+    color: #04AA6D;
+}
+
+.navigation-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3d3d3d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px; /* Schriftgröße setzen */
+    text-align: center;
+    display: inline-block;
+    width: auto; /* Button-Breite automatisch anpassen */
+}
+
+.navigation-button:hover {
+    background-color: #04AA6D;
+    color: #3d3d3d;
+}

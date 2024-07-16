@@ -1,0 +1,236 @@
+/* feed.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #3d3d3d;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    color: #FFFFFF;
+}
+
+#content {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+    background-color: #CAD4E4;
+}
+
+.post {
+    background-color: #ffffff;
+    border: 2px solid #3d3d3d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.post img {
+    max-width: 100%;  
+    max-height: 500px;  
+    object-fit: cover; 
+    display: block;  
+    margin: 10px 0;  
+}
+
+
+footer {
+    background-color: #3d3d3d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.klasse-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #3d3d3d;
+}
+
+.navigation-element {
+    text-align: center;
+    flex-grow: 1;
+    height: auto;
+    background-color: #3d3d3d;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.navigation-link {
+    color: #FFFFFF;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navigation-link:hover {
+    text-decoration: underline;
+    color: #04AA6D;
+}
+
+.navigation-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3d3d3d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+}
+
+.navigation-button:hover {
+    background-color: #04AA6D;
+    color: #3d3d3d;
+}
+
+.like-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.like-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.like-count {
+    vertical-align: middle;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.profilbild {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 40px;
+    vertical-align: middle;
+}
+
+.post h2 {
+    margin: 0;
+}
+
+#id-erstellt {
+    font-size: 10px;
+}
+
+
+.comment {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comment-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.comment-button img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Popup Stile */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 80%;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.nav-icon {
+    width: 40px;  
+    height: 40px; 
+    vertical-align: middle; 
+}
+
+.navigation-element a, .navigation-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-element a img, .navigation-button img {
+    margin-right: 8px; 
+}
+
+#upload-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+}
+
+footer {
+    background-color: #3d3d3d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

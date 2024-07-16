@@ -1,0 +1,253 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    font-size: 16px; 
+}
+ 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #3d3d3d;
+}
+
+article {
+    flex: 1;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #3d3d3d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.klasse-ablaufleiste {
+    margin-bottom: 0px;
+}
+
+.klasse-abbruch {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.klasse-abbruch-button {
+    float: left;
+    text-align: center;
+    width: 25%;
+    height: 4%;
+    background-color: #3d3d3d;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.klasse-abbruch-button:hover {
+    background-color: #04AA6D;
+    color: #3d3d3d;
+}
+
+.klasse-hochladen {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: -4px;
+}
+
+.klasse-hochladen-button {
+    float: right;
+    text-align: center;
+    width: 25%;
+    height: 4%;
+    background-color: #3d3d3d;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.klasse-hochladen-button:hover {
+    background-color: #04AA6D;
+    color: #3d3d3d;
+}
+
+.klasse-titel {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    float: left;
+    border: 2px solid #3d3d3d;
+    width: 100%;
+    height: auto; 
+    background-color: #CAD4E4;
+    padding: 10px;
+    font-size: 20px; 
+	
+	
+}
+
+#id_titel {
+	width: 100%;
+	text-align: left;
+	background-color: #CAD4E4;
+	border-color: none;
+	border: none;
+    color: #3d3d3d;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 99%;
+	font-size: 25px;
+}
+
+
+.klasse-dateihinzufuegen {
+position: relative;
+	float: left;
+	text-align: left;
+	border: 2px solid;
+	border-color: #3d3d3d;
+	border-top: none;
+	width: 100%;
+	background-color: #CAD4E4;
+    color: #3d3d3d;
+	padding-top: 10px;
+	padding-bottom: 200px;
+	font-size: 20px;
+
+}
+
+
+
+.klasse-hobbyauswahl {
+    position: relative;
+    float: left;
+    text-align: left;
+    border: 2px solid #3d3d3d;
+	border-top: none;
+    width: 100%;
+    background-color: #CAD4E4;
+    color: #3d3d3d;
+    padding: 10px;
+    font-size: 20px; 
+	padding-bottom: 15px;
+	padding-top: 15px;
+
+	
+}
+
+.klasse-kommentar {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    float: left;
+    border: 2px solid #3d3d3d;
+	border-top: none;
+
+    width: 100%;
+    height: auto; 
+    background-color: #CAD4E4;
+    padding: 10px;
+    font-size: 20px; 
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+
+
+#id_kommentar {
+	resize: none;
+    width: 98%;
+    font-size: 20px; 
+    font-family: Arial;
+    border: none;
+    padding: 10px;;
+}
+
+.klasse-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #3d3d3d;
+}
+
+.navigation-element {
+    text-align: center;
+    width: 25%;
+    height: auto; 
+    background-color: #3d3d3d;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-size: 20px; 
+}
+
+.navigation-link {
+    color: #FFFFFF;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navigation-link:hover {
+    text-decoration: underline;
+    color: #04AA6D;
+}
+
+.navigation-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3d3d3d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    width: auto; 
+}
+
+.navigation-button:hover {
+    background-color: #04AA6D;
+    color: #3d3d3d;
+}
+
+.nav-icon {
+    width: 40px;  
+    height: 40px; 
+    vertical-align: middle; 
+}
+
+.navigation-element a, .navigation-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-element a img, .navigation-button img {
+    margin-right: 8px; 
+}
+
+#upload-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+}
+
+footer {
+    background-color: #3d3d3d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

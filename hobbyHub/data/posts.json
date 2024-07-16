@@ -1,0 +1,165 @@
+[
+    {
+        "id": "f860526b-c499-465f-8adc-291e50fffa65",
+        "benutzer": "Andre",
+        "bild": "images/26095679-9406-47e8-8b51-1c1d0fcc027b.png",
+        "kommentar": "Mein Mountainbike :)",
+        "titel": "Mein Mountainbike!",
+        "hobby": "Radfahren",
+        "likes": [
+            "Andre",
+            "Mustermann"
+        ],
+        "erstellt_am": "2024-07-01T14:37:19.280856",
+        "profilbild": "profile_images/742e0a6e-f5a4-4c9d-b0db-73a207490158.png",
+        "comments": []
+    },
+    {
+        "id": "67e20c09-91cd-4051-b980-029f696a7d32",
+        "benutzer": "Marius",
+        "bild": "images/6063ae1b-c6e9-403d-b11b-b81f23f38021.jpg",
+        "kommentar": "Sieht man jemanden am Freitag in Stuttgart???\r\nIch hab Karten f\u00fcrs Spiel und wir werden ab mittags auf der Fan-Meile sein.\r\nFreue mich \u00fcber bekannte Gesichter :-)",
+        "titel": "Viertelfinale am Freitag 05.07",
+        "hobby": "Fu\u00dfball spielen",
+        "likes": [
+            "Tim"
+        ],
+        "erstellt_am": "2024-07-01T15:17:37.759890",
+        "profilbild": "profile_images/6329a916-4f77-4639-908a-af29e73e837c.jpg",
+        "comments": [
+            {
+                "benutzer": "Marius",
+                "text": "hallo",
+                "erstellt_am": "2024-07-13T12:10:21.756134"
+            }
+        ]
+    },
+    {
+        "id": "15fd9e7d-5de5-4d84-9697-617b089237e3",
+        "benutzer": "Marius",
+        "bild": "images/d07b7258-be2c-4e41-babc-5ef61050e9df.jpg",
+        "kommentar": "Ein weiteres Wochende am See liegt hinter uns. Das sch\u00f6ne ist neben der Wache und der Verantwortung kommt hier auch der Spa\u00df nie zu kurz.",
+        "titel": "Wache am Aichstrutsee bei Welzheim",
+        "hobby": "Schwimmen",
+        "likes": [
+            "Marius"
+        ],
+        "erstellt_am": "2024-07-01T15:27:33.767564",
+        "profilbild": "profile_images/6329a916-4f77-4639-908a-af29e73e837c.jpg"
+    },
+    {
+        "id": "f56f2fa5-1fbe-4b6d-ad11-6d936942d80f",
+        "benutzer": "FelixDVM",
+        "bild": "images/ca785251-d03f-4aed-86e3-158287f7930c.jpg",
+        "kommentar": "Das ist eine meiner neueren Sammelkarten gewesen, die ich verkauft habe ^^",
+        "titel": "Sammelkarte",
+        "hobby": "Brettspiele spielen",
+        "likes": [
+            "FelixDVM"
+        ],
+        "erstellt_am": "2024-07-01T15:24:03.939053",
+        "profilbild": null,
+        "comments": [
+            {
+                "benutzer": "Marius",
+                "text": "Blau\u00e4ugiger wei\u00dfer drache ist besser :)",
+                "erstellt_am": "2024-07-02T11:17:50.504067"
+            }
+        ]
+    },
+    {
+        "id": "0f852ea2-0275-4455-b928-4b2c2c89eccb",
+        "benutzer": "FelixDVM",
+        "bild": "images/938c1bd8-1698-4045-9ba1-44bbc7ff8d14.jpeg",
+        "kommentar": "Das ist eine Katze die ich auf meinem Trip zur Hochschule Ludwigsburg entdeckt habe! Ich finde sie sehr s\u00fc\u00df :)",
+        "titel": "Katze",
+        "hobby": "Reisen",
+        "likes": [
+            "Marius"
+        ],
+        "erstellt_am": "2024-07-01T15:27:23.455073",
+        "profilbild": null,
+        "comments": [
+            {
+                "benutzer": "Marius",
+                "text": "tolle Katze",
+                "erstellt_am": "2024-07-02T12:31:56.038574"
+            }
+        ]
+    },
+    {
+        "id": "88b09c09-e1a4-4288-bfa9-9c482f246eef",
+        "benutzer": "Sin",
+        "bild": "images/c76a4620-bc26-48da-a02d-866b28726532.png",
+        "kommentar": "Auf diesem \"Basketballplatz\" habe ich fr\u00fcher manchmal Basketball gespielt. Ist aber kein wirklicher Basketballplatz, weswegen das Spielen nicht immer so toll war. Hatte eure Schule auch einen Basketballplatz oder eher einen \"Basketballplatz\"?",
+        "titel": "\"Basketballplatz\" meiner alten Schule",
+        "hobby": "Basketball spielen",
+        "likes": [
+            "Marius"
+        ],
+        "erstellt_am": "2024-07-01T15:06:06.922427",
+        "profilbild": "profile_images/6b2b6b32-2f2d-468f-9d38-1033d0088a2a.png"
+    },
+    {
+        "id": "a552b3e1-1261-4ed9-a36b-5d0bdb903710",
+        "benutzer": "Sin",
+        "bild": "images/cb1c1878-5a9b-4223-9303-b74c5e2ea718.jpg",
+        "kommentar": "Ich lese gerne Kurzgeschichten, aber finde aktuell keine guten. Kennt ihr da welche?",
+        "titel": "Kennt ihr gute Geschichten?",
+        "hobby": "Lesen",
+        "likes": [
+            "Sin",
+            "Andre",
+            "Laura",
+            "Marius"
+        ],
+        "erstellt_am": "2024-07-01T15:33:20.998454",
+        "profilbild": "profile_images/6b2b6b32-2f2d-468f-9d38-1033d0088a2a.png",
+        "comments": [
+            {
+                "benutzer": "Andre",
+                "text": "Ich kann dir \"The long walk\" von Stephen King empfehlen!",
+                "erstellt_am": "2024-07-01T17:45:09.496557"
+            }
+        ]
+    },
+    {
+        "id": "a42c198d-08de-46ba-a27f-56fbb7cb54c5",
+        "benutzer": "Marius",
+        "bild": "images/fbef9fa1-2167-4ff7-9b0a-5ed55bb0631b.jpg",
+        "kommentar": "Bin echt gespannt was heute so alles vorgestellt wird.",
+        "titel": "Heute ist die Projektmesse!!! Wuhu :-)",
+        "hobby": "Computerprogrammierung",
+        "likes": [
+            "Marius"
+        ],
+        "erstellt_am": "2024-07-02T11:22:51.535734",
+        "profilbild": "profile_images/6329a916-4f77-4639-908a-af29e73e837c.jpg"
+    },
+    {
+        "id": "247b65c3-dfa8-459f-a8e5-569c568c1c11",
+        "benutzer": "Tim",
+        "bild": "images/0a046c59-e4e0-4a11-bd4c-2adf2126ffa7.jpg",
+        "kommentar": "Ich sammel gerne Aktivit\u00e4ten. Vor allem Antiquit\u00e4ten!",
+        "titel": "Die alten Knochen bewegen",
+        "hobby": "Antiquit\u00e4ten sammeln",
+        "likes": [
+            "Tim",
+            "Marius"
+        ],
+        "erstellt_am": "2024-07-02T11:34:37.103048",
+        "profilbild": "profile_images/e927496e-6b71-49c9-981f-c64de5f58e44.jpg",
+        "comments": [
+            {
+                "benutzer": "Tim",
+                "text": "Man, wie cool!",
+                "erstellt_am": "2024-07-02T11:34:51.083556"
+            },
+            {
+                "benutzer": "Marius",
+                "text": "hallo",
+                "erstellt_am": "2024-07-07T12:28:42.854426"
+            }
+        ]
+    }
+]

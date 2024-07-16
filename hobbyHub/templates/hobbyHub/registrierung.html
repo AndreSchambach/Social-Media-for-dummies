@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung</title>
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+</head>
+<body>
+    <div class="registration-form">
+        <img src="{% static 'icons/HobbyHubIcon.png' %}" alt="Logo HobbyHub">
+        <h1>Registrierung</h1>
+        <form method="post">
+            {% csrf_token %}  
+            {{ form.as_p }}  
+            <button type="submit">Registrieren</button>
+            <div class="form-group">
+                <a href="{% url 'login' %}" title="Zur Registrierung">Schon Registriert? Zurück zum Login</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
